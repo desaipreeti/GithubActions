@@ -1,8 +1,11 @@
 name: My First Workflow
-on: workflow_dispatch
+on: push
 jobs:
   My_first_job_:
     runs-on: ubuntu-latest
     steps:
       - name: My first step
         run: echo "Hello, World!"
+        
+      - name: check the runner
+        run: echo "/cat/etc/os-release"
