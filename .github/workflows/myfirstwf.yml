@@ -8,4 +8,4 @@ jobs:
         run: echo "Hello, World!"
         
       - name: check the runner
-        run: echo "/cat/etc/os-release"
+        run: cat /etc/os-release
