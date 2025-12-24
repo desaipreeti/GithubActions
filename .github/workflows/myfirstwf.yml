@@ -7,6 +7,13 @@ jobs:
       - name: Clone Repo
         uses: actions/checkout@v2
 
+  My_second_job_:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install npm
+        uses: actions/setup-node@v2 
+        with:
+          node-version: '14'
 
-      - name: check files in Repo
-        run: ls -la
+      - name: check version
+        run: node -v
