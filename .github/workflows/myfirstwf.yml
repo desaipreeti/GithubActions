@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Repo
-        run:  git clone https://github.com/desaipreeti/GithubActions.git
+        uses: actions/checkout@v2
 
+        
       - name: check files in Repo
         run: |
           cd GithubActions
