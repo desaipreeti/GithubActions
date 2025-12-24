@@ -9,6 +9,7 @@ jobs:
 
   My_second_job_:
     runs-on: ubuntu-latest
+    needs: My_first_job_
     steps:
       - name: install npm
         uses: actions/setup-node@v2 
