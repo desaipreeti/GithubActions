@@ -4,8 +4,5 @@ jobs:
   My_first_job_:
     runs-on: ubuntu-latest
     steps:
-      - name: My first step
-        run: echo "Hello, World!"
-        
-      - name: check the runner
-        run: cat /etc/os-release
+      - name: Addtion
+        run: echo "The result is $(expr 2 + 3)"
