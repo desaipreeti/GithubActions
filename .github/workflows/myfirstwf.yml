@@ -7,8 +7,6 @@ jobs:
       - name: Clone Repo
         uses: actions/checkout@v2
 
-        
+
       - name: check files in Repo
-        run: |
-          cd GithubActions
-          ls -la
+        run: ls -la
