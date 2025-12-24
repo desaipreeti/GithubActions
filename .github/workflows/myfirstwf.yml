@@ -4,5 +4,10 @@ jobs:
   My_first_job_:
     runs-on: ubuntu-latest
     steps:
-      - name: Addtion
-        run: echo "The result is $(expr 2 + 3)"
+      - name: Clone Repo
+        uses: git clone https://github.com/desaipreeti/GithubActions.git
+
+      - name: check files in Repo
+        run: 
+          cd GithubActions
+          ls -la
