@@ -4,12 +4,6 @@ jobs:
   My_first_job_:
     runs-on: [self-hosted, linux, x64,b14]
     steps:
-      - name: Clone Repo
-        uses: actions/checkout@v2
-
-  My_second_job_:
-    runs-on: [self-hosted, linux, x64,b14]
-    steps:
       - name: install npm
         uses: actions/setup-node@v2 
         with:
