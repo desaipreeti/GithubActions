@@ -8,7 +8,7 @@ jobs:
         run: echo "Hello, World!" > hello.txt
 
       - name: upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: hello-file
           path: hello.txt
