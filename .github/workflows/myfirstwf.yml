@@ -9,7 +9,6 @@ jobs:
 
   My_second_job_:
     runs-on: [self-hosted, linux, x64,b14]
-    needs: My_first_job_
     steps:
       - name: install npm
         uses: actions/setup-node@v2 
