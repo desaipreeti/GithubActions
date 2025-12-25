@@ -13,7 +13,7 @@ jobs:
           path: hello.txt
 
   download_and_read:
-    runs-on: self-hosted
+    runs-on: [self-hosted, linux, x64,b14]
     needs: My_first_job_
     steps:
       - name: download artifact
