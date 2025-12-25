@@ -2,7 +2,7 @@ name: My First Workflow
 on: push
 jobs:
   My_first_job_:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64,b14]
     steps:
       - name: Clone Repo
         uses: actions/checkout@v2
