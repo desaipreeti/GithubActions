@@ -2,12 +2,13 @@ name: My First Workflow
 on: push
 jobs:
   My_first_job_:
-    runs-on: [self-hosted, linux, x64,b14]
+    runs-on: ubuntu-latest
     steps:
-      - name: install npm
-        uses: actions/setup-node@v2 
-        with:
-          node-version: '14'
+      - name: create a file
+        run: echo "Hello, World!" > hello.txt
 
-      - name: check version
-        run: node -v
+      - name: upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: hello-file
+          path: hello.txt
