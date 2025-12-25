@@ -6,7 +6,11 @@ jobs:
     steps:
       - name: create a file
         run: echo "Hello, World!" > hello.txt
-
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hello-file
+          path: hello.txt
 
   download_and_read:
     runs-on: self-hosted
