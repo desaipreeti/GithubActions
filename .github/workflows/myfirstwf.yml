@@ -1,26 +1,18 @@
 name: My First Workflow
 on: push
 jobs:
-  My_first_job_:
+  My_Job:
     runs-on: ubuntu-latest
     steps:
-      - name: create a file
-        run: echo "Hello, World!" > hello.txt
-      - name: upload artifact
-        uses: actions/upload-artifact@v4
+      - name: aws key setuup
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          name: hello-file
-          path: hello.txt
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
 
-  download_and_read:
-    runs-on: [self-hosted, linux, x64,b14]
-    needs: My_first_job_
-    steps:
-      - name: download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: hello-file
-          path: .
+      - name: aws cli check
+        run: aws cli version
 
-      - name: read hello.txt
-        run: cat hello.txt
+      - name: s3 bucket list
+        run: aws s3 list-buckets
